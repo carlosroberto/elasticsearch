@@ -1,0 +1,7 @@
+#inserting the products reference data where a data range determines the price
+POST _bulk
+{ "index":{ "_index": "products"} }
+{ "CATEGORY":"Book","PRODUCT":"Refactoring - Martin Fowler", "PRICE":40,"START_DATE":"20210101","END_DATE":"20210131" }
+{ "index":{ "_index": "products"} }
+{ "CATEGORY":"Book","PRODUCT":"Refactoring - Martin Fowler", "PRICE":51,"START_DATE":"20210201","END_DATE":"29991231" }
+{ "index":{ "_index": "products"} }

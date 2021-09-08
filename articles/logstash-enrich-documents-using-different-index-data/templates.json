@@ -1,0 +1,42 @@
+#template for products index
+PUT _template/products
+{
+	"index_patterns":["products"],
+	"settings": {
+		"number_of_shards":1
+	},
+	"mappings":{
+		"_source": {
+			"enabled": true
+		},
+	"properties": {
+		"CATEGORY" : {"type" : "keyword"},
+		"PRODUCT" : {"type" : "keyword"},
+		"PRICE" : {"type": "double"},
+		"START_DATE" : {"type": "date", "format": ["yyyyMMdd"]},
+		"END_DATE" : {"type": "date", "format": ["yyyyMMdd"]}
+	}
+	}
+}
+
+
+#template for transactions index
+PUT _template/transactions
+{
+	"index_patterns":["transactions"],
+	"settings": {
+		"number_of_shards":1
+	},
+	"mappings":{
+		"_source": {
+			"enabled": true
+		},
+	"properties": {
+	  "CUSTOMER_NAME" : {"type": "text"}, 
+		"CATEGORY" : {"type" : "keyword"},
+		"PRODUCT" : {"type" : "keyword"},
+		"PRICE" : {"type": "double"},
+		"PURCHASE_DATE" : {"type": "date", "format": ["yyyyMMdd"]}
+	}
+	}
+}

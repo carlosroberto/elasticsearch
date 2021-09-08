@@ -1,0 +1,36 @@
+{
+  "size": 1,
+  "_source": "PRICE", 
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "match": {
+            "CATEGORY": "%{CATEGORY}"
+          }
+        },
+        {
+          "match": {
+            "PRODUCT": "%{PRODUCT}"
+          }
+        }
+      ],
+      "filter": [
+        {
+          "range": {
+            "START_DATE": {
+              "lte": "%{PURCHASE_DATE}"
+            }
+          }
+        },
+        {
+          "range": {
+            "END_DATE": {
+              "gte": "%{PURCHASE_DATE}"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

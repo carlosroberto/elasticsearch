@@ -1,0 +1,4 @@
+CUSTOMER_NAME,CATEGORY,PRODUCT,PRICE,PURCHASE_DATE
+John,Book,Refactoring - Martin Fowler,20210115
+James,Book,Refactoring - Martin Fowler,20210215
+Hezekiah,Book,Refactoring - Martin Fowler,20210201
